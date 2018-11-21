@@ -716,7 +716,7 @@
                                 <rect key="frame" x="163" y="381" width="441" height="47"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="A tool for extracting car format files " id="JQw-LQ-a3Y">
                                     <font key="font" size="27" name="DFWaWaSC-W5"/>
-                                    <color key="textColor" red="1" green="0.94058901908951897" blue="0.27217748434477373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.78586463730569944" green="0.65679731777881278" blue="0.043467623872605041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
