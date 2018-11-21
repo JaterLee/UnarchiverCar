@@ -17,7 +17,7 @@
 		5649187B21997FBA00285BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5649187921997FBA00285BCF /* Main.storyboard */; };
 		5649188721997FBA00285BCF /* UnarchiverCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649188621997FBA00285BCF /* UnarchiverCarTests.swift */; };
 		5649189221997FBA00285BCF /* UnarchiverCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649189121997FBA00285BCF /* UnarchiverCarUITests.swift */; };
-		564918A22199840100285BCF /* r2VSkzO1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564918A12199840100285BCF /* r2VSkzO1@3x.png */; };
+		A9C1E7A621A5A00E000DADEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C1E7A521A5A00E000DADEC /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		5649188D21997FBA00285BCF /* UnarchiverCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnarchiverCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649189121997FBA00285BCF /* UnarchiverCarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnarchiverCarUITests.swift; sourceTree = "<group>"; };
 		5649189321997FBA00285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		564918A12199840100285BCF /* r2VSkzO1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "r2VSkzO1@3x.png"; sourceTree = "<group>"; };
+		A9C1E7A521A5A00E000DADEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C1E7A621A5A00E000DADEC /* Foundation.framework in Frameworks */,
 				5605724D21A5855E00BEE95A /* CoreUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +90,7 @@
 		5605724B21A5855D00BEE95A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9C1E7A521A5A00E000DADEC /* Foundation.framework */,
 				5605724C21A5855E00BEE95A /* CoreUI.framework */,
 			);
 			name = Frameworks;
@@ -118,7 +120,6 @@
 		5649187221997FB800285BCF /* UnarchiverCar */ = {
 			isa = PBXGroup;
 			children = (
-				564918A12199840100285BCF /* r2VSkzO1@3x.png */,
 				5649187321997FB800285BCF /* AppDelegate.swift */,
 				5649187521997FB800285BCF /* ViewController.swift */,
 				5605723C21A432A300BEE95A /* JAInputView.swift */,
@@ -259,7 +260,6 @@
 			files = (
 				5649187821997FBA00285BCF /* Assets.xcassets in Resources */,
 				5649187B21997FBA00285BCF /* Main.storyboard in Resources */,
-				564918A22199840100285BCF /* r2VSkzO1@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +468,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.unarchiverCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UnarchiverCar/UnarchiverCar-Bridging-Header.h";
@@ -498,6 +499,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.unarchiverCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UnarchiverCar/UnarchiverCar-Bridging-Header.h";

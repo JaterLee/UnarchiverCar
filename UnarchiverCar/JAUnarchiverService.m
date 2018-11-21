@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, UIUserInterfaceSizeClass) {
 
 @interface CUIThemeFacet : NSObject
 
-+(CUIThemeFacet *)themeWithContentsOfURL:(NSURL *)u error:(NSError **)e;
++ (unsigned long long)themeWithContentsOfURL:(id)arg1 error:(id*)arg2;
 
 @end
 
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, UIUserInterfaceSizeClass) {
 
 @implementation JAUnarchiverService
 
-+ (void)exportCarFileAtPath:(NSString *)carFilePath toExportPath:(NSString *)exportPath {
+- (void)exportCarFileAtPath:(NSString *)carFilePath toExportPath:(NSString *)exportPath {
     static NSString *header = @"file://";
     if ([carFilePath containsString:header]) {
         carFilePath = [carFilePath stringByReplacingOccurrencesOfString:header withString:@""];
@@ -162,12 +162,12 @@ void exportCarFileAtPath(NSString * carPath, NSString *outputDirectoryPath)
     
     outputDirectoryPath = [outputDirectoryPath stringByExpandingTildeInPath];
     
-    CUIThemeFacet *facet = [CUIThemeFacet themeWithContentsOfURL:[NSURL fileURLWithPath:carPath] error:&error];
+    unsigned long long storageRef = [CUIThemeFacet themeWithContentsOfURL:[NSURL URLWithString:carPath] error:&error];
     
     CUICatalog *catalog = [[CUICatalog alloc] init];
     
     /* Override CUICatalog to point to a file rather than a bundle */
-    [catalog setValue:facet forKey:@"_storageRef"];
+    [catalog setValue:@(storageRef) forKey:@"_storageRef"];
     
     /* CUICommonAssetStorage won't link */
     CUICommonAssetStorage *storage = [[NSClassFromString(@"CUICommonAssetStorage") alloc] initWithPath:carPath];

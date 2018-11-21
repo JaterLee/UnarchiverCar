@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JAUnarchiverService : NSObject
 
-+ (void)exportCarFileAtPath:(NSString *)carFilePath toExportPath:(NSString *)exportPath;
+- (void)exportCarFileAtPath:(NSString *)carFilePath toExportPath:(NSString *)exportPath;
 
 @end
 

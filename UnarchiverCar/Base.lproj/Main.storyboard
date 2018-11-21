@@ -685,11 +685,13 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="UnarchiverCar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="760" height="520"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="760" height="520"/>
+                        <value key="minFullScreenContentSize" type="size" width="760" height="520"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -711,16 +713,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YfP-7M-MHu" userLabel="A tool for extracting car format files">
-                                <rect key="frame" x="233" y="393" width="302" height="35"/>
+                                <rect key="frame" x="163" y="381" width="441" height="47"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="A tool for extracting car format files " id="JQw-LQ-a3Y">
-                                    <font key="font" size="22" name="SnellRoundhand"/>
-                                    <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="27" name="DFWaWaSC-W5"/>
+                                    <color key="textColor" red="1" green="0.94058901908951897" blue="0.27217748434477373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-wC-u55">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-wC-u55">
                                 <rect key="frame" x="351" y="433" width="65" height="65"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r2VSkzO1" id="v8N-TJ-yC7"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lff-aR-LdQ"/>
+                                    <constraint firstAttribute="width" constant="65" id="tWE-IQ-54T"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="v8N-TJ-yC7"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vbm-Bl-iOm">
                                 <rect key="frame" x="345" y="37" width="77" height="32"/>
@@ -733,10 +739,10 @@
                                 </connections>
                             </button>
                             <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktd-G0-otL" customClass="JAInputView" customModule="UnarchiverCar" customModuleProvider="target">
-                                <rect key="frame" x="50" y="132" width="307" height="211"/>
+                                <rect key="frame" x="50" y="120" width="307" height="211"/>
                             </customView>
                             <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-if-FsF" customClass="JAExportView" customModule="UnarchiverCar" customModuleProvider="target">
-                                <rect key="frame" x="410" y="132" width="307" height="211"/>
+                                <rect key="frame" x="410" y="120" width="307" height="211"/>
                             </customView>
                         </subviews>
                         <constraints>
@@ -764,10 +770,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.5" y="784"/>
+            <point key="canvasLocation" x="72" y="886"/>
         </scene>
     </scenes>
     <resources>
-        <image name="r2VSkzO1" width="60" height="55"/>
+        <image name="Icon" width="405.09890747070312" height="405.09890747070312"/>
     </resources>
 </document>

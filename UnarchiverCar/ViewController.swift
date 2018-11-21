@@ -21,6 +21,8 @@ class ViewController: NSViewController, JAFilePathChooseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         self.inputView.delegate = self
         self.exportView.delegate = self
         
@@ -54,6 +56,7 @@ class ViewController: NSViewController, JAFilePathChooseDelegate {
     }
     
     func exportCarFileAtPath() -> Void {
-        JAUnarchiverService.exportCarFile(atPath: self.inputFilePath, toExportPath: self.exportFilePath)
+        let service = JAUnarchiverService.init()
+        service.exportCarFile(atPath: self.inputFilePath, toExportPath: self.exportFilePath)
     }
 }
