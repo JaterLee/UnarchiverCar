@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5605723D21A432A300BEE95A /* JAInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5605723C21A432A300BEE95A /* JAInputView.swift */; };
+		5605723F21A50FDD00BEE95A /* JAExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5605723E21A50FDD00BEE95A /* JAExportView.swift */; };
+		5605724A21A5816400BEE95A /* JAUnarchiverService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5605724921A5816400BEE95A /* JAUnarchiverService.m */; };
+		5605724D21A5855E00BEE95A /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5605724C21A5855E00BEE95A /* CoreUI.framework */; };
 		5649187421997FB800285BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649187321997FB800285BCF /* AppDelegate.swift */; };
 		5649187621997FB800285BCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649187521997FB800285BCF /* ViewController.swift */; };
 		5649187821997FBA00285BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5649187721997FBA00285BCF /* Assets.xcassets */; };
@@ -36,6 +39,11 @@
 
 /* Begin PBXFileReference section */
 		5605723C21A432A300BEE95A /* JAInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JAInputView.swift; sourceTree = "<group>"; };
+		5605723E21A50FDD00BEE95A /* JAExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JAExportView.swift; sourceTree = "<group>"; };
+		5605724721A5816400BEE95A /* UnarchiverCar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnarchiverCar-Bridging-Header.h"; sourceTree = "<group>"; };
+		5605724821A5816400BEE95A /* JAUnarchiverService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAUnarchiverService.h; sourceTree = "<group>"; };
+		5605724921A5816400BEE95A /* JAUnarchiverService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAUnarchiverService.m; sourceTree = "<group>"; };
+		5605724C21A5855E00BEE95A /* CoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreUI.framework; path = ../../../../../System/Library/PrivateFrameworks/CoreUI.framework; sourceTree = "<group>"; };
 		5649187021997FB800285BCF /* UnarchiverCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnarchiverCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649187321997FB800285BCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5649187521997FB800285BCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5605724D21A5855E00BEE95A /* CoreUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5605724B21A5855D00BEE95A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5605724C21A5855E00BEE95A /* CoreUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5649186721997FB800285BCF = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +101,7 @@
 				5649188521997FBA00285BCF /* UnarchiverCarTests */,
 				5649189021997FBA00285BCF /* UnarchiverCarUITests */,
 				5649187121997FB800285BCF /* Products */,
+				5605724B21A5855D00BEE95A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +122,14 @@
 				5649187321997FB800285BCF /* AppDelegate.swift */,
 				5649187521997FB800285BCF /* ViewController.swift */,
 				5605723C21A432A300BEE95A /* JAInputView.swift */,
+				5605723E21A50FDD00BEE95A /* JAExportView.swift */,
 				5649187721997FBA00285BCF /* Assets.xcassets */,
 				5649187921997FBA00285BCF /* Main.storyboard */,
 				5649187C21997FBA00285BCF /* Info.plist */,
 				5649187D21997FBA00285BCF /* UnarchiverCar.entitlements */,
+				5605724821A5816400BEE95A /* JAUnarchiverService.h */,
+				5605724921A5816400BEE95A /* JAUnarchiverService.m */,
+				5605724721A5816400BEE95A /* UnarchiverCar-Bridging-Header.h */,
 			);
 			path = UnarchiverCar;
 			sourceTree = "<group>";
@@ -198,6 +220,7 @@
 				TargetAttributes = {
 					5649186F21997FB800285BCF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					5649188121997FBA00285BCF = {
 						CreatedOnToolsVersion = 10.1;
@@ -262,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5649187621997FB800285BCF /* ViewController.swift in Sources */,
+				5605723F21A50FDD00BEE95A /* JAExportView.swift in Sources */,
 				5649187421997FB800285BCF /* AppDelegate.swift in Sources */,
 				5605723D21A432A300BEE95A /* JAInputView.swift in Sources */,
+				5605724A21A5816400BEE95A /* JAUnarchiverService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +454,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UnarchiverCar/UnarchiverCar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnarchiverCar",
+				);
 				INFOPLIST_FILE = UnarchiverCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,7 +470,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.unarchiverCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnarchiverCar/UnarchiverCar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -448,10 +484,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UnarchiverCar/UnarchiverCar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnarchiverCar",
+				);
 				INFOPLIST_FILE = UnarchiverCar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +500,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.unarchiverCar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnarchiverCar/UnarchiverCar-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};

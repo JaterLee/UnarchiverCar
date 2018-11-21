@@ -718,32 +718,49 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-wC-u55">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-wC-u55">
                                 <rect key="frame" x="351" y="433" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r2VSkzO1" id="v8N-TJ-yC7"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vbm-Bl-iOm">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vbm-Bl-iOm">
                                 <rect key="frame" x="345" y="37" width="77" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Get it!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SlP-e1-MC4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="getButtonAction:" target="XfG-lQ-9wD" id="wsQ-yR-cM2"/>
+                                </connections>
                             </button>
                             <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktd-G0-otL" customClass="JAInputView" customModule="UnarchiverCar" customModuleProvider="target">
-                                <rect key="frame" x="50" y="82" width="307" height="211"/>
+                                <rect key="frame" x="50" y="132" width="307" height="211"/>
+                            </customView>
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xxY-if-FsF" customClass="JAExportView" customModule="UnarchiverCar" customModuleProvider="target">
+                                <rect key="frame" x="410" y="132" width="307" height="211"/>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Ktd-G0-otL" firstAttribute="top" secondItem="YfP-7M-MHu" secondAttribute="bottom" constant="100" id="8Ie-js-4wu"/>
+                            <constraint firstItem="Ktd-G0-otL" firstAttribute="top" secondItem="YfP-7M-MHu" secondAttribute="bottom" constant="50" id="8Ie-js-4wu"/>
                             <constraint firstItem="YfP-7M-MHu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="100" id="DLD-pH-UNb"/>
+                            <constraint firstItem="xxY-if-FsF" firstAttribute="centerY" secondItem="Ktd-G0-otL" secondAttribute="centerY" id="DdT-pv-r9P"/>
                             <constraint firstItem="Ktd-G0-otL" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="1/2.5" id="MOg-fJ-b2S"/>
+                            <constraint firstAttribute="trailing" secondItem="xxY-if-FsF" secondAttribute="trailing" constant="50" id="Q8L-Cr-buo"/>
+                            <constraint firstItem="ZpT-wC-u55" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ulp-Xh-CCd"/>
+                            <constraint firstItem="xxY-if-FsF" firstAttribute="height" secondItem="Ktd-G0-otL" secondAttribute="height" id="Yma-Rw-naU"/>
                             <constraint firstItem="Ktd-G0-otL" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="fMH-ZS-YxH"/>
                             <constraint firstItem="Ktd-G0-otL" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="1/2.5" id="i8r-dH-cTM"/>
+                            <constraint firstItem="ZpT-wC-u55" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="iDa-VK-ho8"/>
+                            <constraint firstItem="xxY-if-FsF" firstAttribute="width" secondItem="Ktd-G0-otL" secondAttribute="width" id="j7W-CV-i2C"/>
+                            <constraint firstItem="Vbm-Bl-iOm" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="jC6-6E-ksU"/>
                             <constraint firstItem="YfP-7M-MHu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="txS-CU-9KK"/>
+                            <constraint firstAttribute="bottom" secondItem="Vbm-Bl-iOm" secondAttribute="bottom" constant="44" id="vJZ-eB-2lc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="exportView" destination="xxY-if-FsF" id="jNd-25-8WA"/>
+                        <outlet property="getButton" destination="Vbm-Bl-iOm" id="r4H-JE-HKM"/>
+                        <outlet property="inputView" destination="Ktd-G0-otL" id="Kuc-lf-V8n"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
